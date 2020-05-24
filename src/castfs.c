@@ -5,6 +5,14 @@
 #include "castfs.h"
 #include "hash.h"
 
+int logfd;
+int dbglvl;
+
+char *mount_path;
+char *stage_path;
+char **ignored_dirs;
+int ignored_dirs_len;
+
 /* getattr(): see man fstat or man lstat */
 static int cast_getattr(const char *path, struct stat *stbuf)
 {

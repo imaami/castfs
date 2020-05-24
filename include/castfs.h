@@ -38,13 +38,13 @@ struct st_cast_path
 typedef struct st_cast_path cast_paths;
 typedef cast_paths* cast_paths_ptr;
 
-int logfd;
-int dbglvl;
+extern int logfd;
+extern int dbglvl;
 
-char *mount_path;
-char *stage_path;
-char **ignored_dirs;
-int ignored_dirs_len;
+extern char *mount_path;
+extern char *stage_path;
+extern char **ignored_dirs;
+extern int ignored_dirs_len;
 
 void usage(void);
 int cast_log(unsigned int dbgmask, const char* format,...);
